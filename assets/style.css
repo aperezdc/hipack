@@ -1,13 +1,84 @@
-/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 13px Helmet, Freesans, sans-serif;}
 
-/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Bold-webfont.eot');
+    src: url('Aileron-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Bold-webfont.woff2') format('woff2'),
+         url('Aileron-Bold-webfont.woff') format('woff'),
+         url('Aileron-Bold-webfont.ttf') format('truetype'),
+         url('Aileron-Bold-webfont.svg#aileronbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 
-/* We like off-black for text. */
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-BoldItalic-webfont.eot');
+    src: url('Aileron-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-BoldItalic-webfont.woff2') format('woff2'),
+         url('Aileron-BoldItalic-webfont.woff') format('woff'),
+         url('Aileron-BoldItalic-webfont.ttf') format('truetype'),
+         url('Aileron-BoldItalic-webfont.svg#aileronbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Italic-webfont.eot');
+    src: url('Aileron-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Italic-webfont.woff2') format('woff2'),
+         url('Aileron-Italic-webfont.woff') format('woff'),
+         url('Aileron-Italic-webfont.ttf') format('truetype'),
+         url('Aileron-Italic-webfont.svg#aileronitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Regular-webfont.eot');
+    src: url('Aileron-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Regular-webfont.woff2') format('woff2'),
+         url('Aileron-Regular-webfont.woff') format('woff'),
+         url('Aileron-Regular-webfont.ttf') format('truetype'),
+         url('Aileron-Regular-webfont.svg#aileronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+	font: 16px/24px Aileron, Helmet, Freesans, sans-serif;
+}
+
+ul, ol, dl {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: 200%;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	border-bottom: 2px solid #800000;
+}
+
+h3 {
+	font-size: 120%;
+	font-weight: bold;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}
+
 body, select, input, textarea {color: #333;}
 
-a {color: #03f;}
-a:hover {color: #69f;}
+a {color: #800000;}
+a:hover {color: #550000;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
@@ -46,6 +117,7 @@ header nav {
 header nav ol {
 	text-align: right;
 	height: 100%;
+	margin: 0;
 }
 
 header nav li {
@@ -67,6 +139,64 @@ header nav a {
 header nav a:hover {
 	background-color: #C53333;
 	color: #330000;
+}
+
+
+footer {
+	margin: 2em 0;
+	padding-top: 5em;
+	padding-bottom: 1em;
+	font-size: 80%;
+	text-align: center;
+	color: #ccc;
+}
+
+
+/* Column system
+-------------------------------------------------------------------------------*/
+.column-30 { width: 30%; }
+.column-50 { width: 50%; }
+.column-70 { width: 70%; }
+.column-left { float: left; }
+.column-right { float: right; }
+.column-flush { clear: both; }
+
+
+/* Columns of the about blurb
+-------------------------------------------------------------------------------*/
+#about-blurb-container {
+	background: #330000;
+	border-bottom: 3px solid #800000;
+}
+
+#about-blurb-container .column-left {
+	background: #5a0000;
+	color: #ffefef;
+	padding: 1em;
+}
+
+#about-blurb-container .column-left {
+}
+
+
+/* Styling for the language support list
+-------------------------------------------------------------------------------*/
+dl.tagged-list {
+}
+
+dl.tagged-list dt,
+dl.tagged-list dd {
+	padding: 0.25em 0.5em;
+}
+
+dl.tagged-list dt {
+	text-align: right;
+}
+
+dl.tagged-list dd span {
+	display: block;
+	color: #888;
+	font-style: italic;
 }
 
 

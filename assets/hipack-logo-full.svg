@@ -13,8 +13,8 @@
    inkscape:version="0.91 r13725"
    width="202"
    height="48"
-   sodipodi:docname="hipack-logo.svg"
-   inkscape:export-filename="/home/aperez/devel/hipack/assets/hipack-logo.png"
+   sodipodi:docname="hipack-logo-full.svg"
+   inkscape:export-filename="/home/aperez/devel/hipack/assets/hipack-logo-full.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <metadata
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,11 +44,11 @@
      showgrid="false"
      inkscape:snap-global="false"
      showguides="true"
-     inkscape:zoom="3.9999998"
-     inkscape:cx="58.531676"
-     inkscape:cy="13.577828"
-     inkscape:window-x="-1"
-     inkscape:window-y="6"
+     inkscape:zoom="1"
+     inkscape:cx="77.267836"
+     inkscape:cy="-50.796016"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2985"
      inkscape:guide-bbox="true">
@@ -120,11 +120,13 @@
   </defs>
   <g
      id="g3016" />
-  <path
-     id="rect4364"
-     style="opacity:1;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.35433072;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 2,2 2,3.9960938 24,26 46,3.9960938 46,2 2,2 Z m 22,4 a 6,6 0 0 1 6,6 6,6 0 0 1 -6,6 6,6 0 0 1 -6,-6 6,6 0 0 1 6,-6 z M 2,7.996094 2,46 l 44,0 0,-38.003906 -22,22 z"
-     inkscape:connector-curvature="0" />
+  <rect
+     style="opacity:1;fill:#800000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4160"
+     width="44"
+     height="44"
+     x="2"
+     y="2" />
   <path
      style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:medium;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 67.623047,2 0,20.724609 -25.761719,0 0,3.378907 25.761719,0 0,19.896484 3.953125,0 0,-44 z"
@@ -157,4 +159,22 @@
      style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:medium;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 194.37359,46 5.50954,0 -16.72083,-17.681803 16.59271,-16.208318 -5.18923,0 -17.36148,17.617738 0,-25.727617 -3.972,0 0,42 3.972,0 0,-11.915997 3.07509,-3.267289 z"
      sodipodi:nodetypes="ccccccccccccc" />
+  <rect
+     y="5"
+     x="5"
+     height="38"
+     width="38"
+     id="rect4162"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 24,9.5 A 4.5,4.5 0 0 1 28.5,14 4.5,4.5 0 0 1 24,18.5 4.5,4.5 0 0 1 19.5,14 4.5,4.5 0 0 1 24,9.5 Z"
+     id="path4168"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 3.5,8.812 24.173828,30.134766 44.5,9.162"
+     id="path4178"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
 </svg>

@@ -43,7 +43,7 @@
 	<meta name="twitter:site" content="">
 	<meta name="twitter:title" content="HiPack">
 	<meta name="twitter:description" content="A serialization format that is kinda compact (like MessagePack), but human-readable.">
-	<meta name="twitter:image" content="">
+	<meta name="twitter:image" content="http://hipack.org/assets/hipack-logo-full.png">
 	<meta name="twitter:url" content="http://hipack.org">
 	-->
 
@@ -51,8 +51,7 @@
 	<meta property="og:title" content="HiPack" />
 	<meta property="og:description" content="HiPack: like MessagePack, but human." />
 	<meta property="og:url" content="http://hipack.org" />
-	<!-- <meta property="og:image" content="" /> -->
-
+	<meta property="og:image" content="http://hipack.org/assets/hipack-logo-full.png" />
 </head>
 
 <body>
@@ -70,23 +69,63 @@
 		</nav>
 	</header>
 
-	<!--
 	<article>
-		<h1>Article Header</h1>
-		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-		<h2>Article Subhead</h2>
-		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
+		<h1 style="display:none"><a id="about">About</a></h1>
+
+		<div id="about-blurb-container">
+			<div class="column-left column-30">
+				<h3>It's like MessagePack,<br>
+					but human.</h3>
+				<p>
+					HiPack is a human-friendly serialization format. It allows
+					you to exchange data among multiple languages. Like JSON,
+					it can be understood both by machines, and humans — with
+					emphasis on the later. Unlike MessagePack, it is not
+					binary but text-based.
+				</p>
+			</div>
+			<div class="column-right column-70">
+			</div>
+			<div class="column-flush"></div>
+		</div>
 	</article>
 
-	<aside>
-		<h2>Sidebar Content</h2>
-	</aside>
+	<article>
+		<h1><a id="spec">Specification</a></h1>
 
-	<footer>
-		<p><small>&copy; Copyright The HiPack contributors, 2015.</small></p>
+		<p>
+			For the moment, the most up-to-date specification is the <a
+		 		href="https://github.com/aperezdc/python-wcfg#grammar">EBNF
+			grammar</a> from <a href="https://github.com/aperezdc/python-wcfg">python-wcfg</a>.
+		</p>
+	</article>
+
+	<article>
+		<h1><a id="code">Code</a></h1>
+
+		<p>
+			<strong>HiPack</strong> can be used with the following programming
+			languages:
+		</p>
+
+		<dl class="tagged-list">
+			<dt class="column-left column-30">Python</dt>
+			<dd class="column-right column-70">
+				<a href="https://github.com/aperezdc/python-wcfg">python-wcfg</a>
+				<span>Reference implementation.</span>
+			</dd>
+
+			<dt class="column-flush column-left column-30">C</dt>
+			<dd class="column-right column-70">
+				<a href="https://github.com/aperezdc/wheel">wheel</a>
+				<span>Implementation included in libwheel.</span>
+			</dd>
+		</dl>
+	</article>
+
+	<footer class="column-flush">
+		<p>&copy; 2015, The HiPack contributors.</p>
 	</footer>
-	-->
-
 </div>
 
 </body>
