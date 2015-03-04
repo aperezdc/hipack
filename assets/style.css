@@ -23,15 +23,19 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
+div.wrapper {
+	width: 720px;
+	margin: 0 auto;
+}
 
 header {
-	padding: 1em 2em;
-	background-color: #eef;
+	background: url(hipack-logo-full.png) 0.75em 50% no-repeat;
+	border-bottom: 3px solid #800000;
+	height: 100px;
 }
 
 
 header h1 {
-	font: 50px Telex, sans-serif;
 	float: left;
 }
 
@@ -40,16 +44,29 @@ header nav {
 }
 
 header nav ol {
-	position: relative;
-	right: 2em;
-	top: 2em;
+	text-align: right;
+	height: 100%;
 }
 
 header nav li {
-	display: inline;
-	font-size: 150%;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	display: block;
+	float: left;
+}
+
+header nav a {
+	text-decoration: none;
+	font-size: 22px;
+	padding-top: 50px;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	height: 100px;
+	display: block;
+	border-bottom: 3px solid #800000;
+}
+
+header nav a:hover {
+	background-color: #C53333;
+	color: #330000;
 }
 
 
@@ -57,8 +74,6 @@ header nav li {
 -------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 480px) {
-	
-		
 }
 
 
@@ -66,7 +81,4 @@ header nav li {
 /* Print styles
 -------------------------------------------------------------------------------*/
 @media print {
-
-
-
 }
