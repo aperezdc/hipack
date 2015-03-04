@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 48 48"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="100%"
+   height="100%"
+   sodipodi:docname="hipack-logo.svg">
+  <metadata
+     id="metadata3048">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     id="namedview3046"
+     showgrid="false"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:zoom="11.313708"
+     inkscape:cx="19.820299"
+     inkscape:cy="26.614178"
+     inkscape:window-x="-1"
+     inkscape:window-y="6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2985">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3890" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2987">
+    <inkscape:path-effect
+       effect="envelope"
+       id="path-effect4362"
+       is_visible="true"
+       yy="true"
+       xx="true"
+       bendpath1="m 5.0000002,9.2499983 18.0625008,0"
+       bendpath2="m 23.062501,9.2499983 0,27.4375007"
+       bendpath3="m 5.0000002,36.687499 18.0625008,0"
+       bendpath4="m 5.0000002,9.2499983 0,27.4375007" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-77.95835 : 23.896346 : 1"
+       inkscape:vp_y="0 : 939.02811 : 0"
+       inkscape:vp_z="122.51805 : 23.56435 : 1"
+       inkscape:persp3d-origin="17.759816 : 18.542099 : 1"
+       id="perspective3544" />
+    <linearGradient
+       id="linearGradient3764"
+       x1="1"
+       x2="47"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,-1.5e-6,47.999998)">
+      <stop
+         stop-color="#575757"
+         stop-opacity="1"
+         id="stop2990" />
+      <stop
+         offset="1"
+         stop-color="#616161"
+         stop-opacity="1"
+         id="stop2992" />
+    </linearGradient>
+    <clipPath
+       id="clipPath-453839718">
+      <g
+         transform="translate(0,-1004.3622)"
+         id="g2995">
+        <path
+           d="m -24 13 c 0 1.105 -0.672 2 -1.5 2 -0.828 0 -1.5 -0.895 -1.5 -2 0 -1.105 0.672 -2 1.5 -2 0.828 0 1.5 0.895 1.5 2 z"
+           transform="matrix(15.333333,0,0,11.5,414.99999,878.8622)"
+           id="path2997"
+           fill="#1890d0" />
+      </g>
+    </clipPath>
+    <clipPath
+       id="clipPath-462896869">
+      <g
+         transform="translate(0,-1004.3622)"
+         id="g3000">
+        <path
+           d="m -24 13 c 0 1.105 -0.672 2 -1.5 2 -0.828 0 -1.5 -0.895 -1.5 -2 0 -1.105 0.672 -2 1.5 -2 0.828 0 1.5 0.895 1.5 2 z"
+           transform="matrix(15.333333,0,0,11.5,414.99999,878.8622)"
+           id="path3002"
+           fill="#1890d0" />
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     id="g3016" />
+  <path
+     id="rect4364"
+     style="opacity:1;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.35433072;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 2,2 2,3.9960938 24,26 46,3.9960938 46,2 2,2 Z m 22,4 a 6,6 0 0 1 6,6 6,6 0 0 1 -6,6 6,6 0 0 1 -6,-6 6,6 0 0 1 6,-6 z M 2,7.996094 2,46 l 44,0 0,-38.003906 -22,22 z" />
+</svg>
