@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="hipack-encoding.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="329.22295"
+     inkscape:cy="654.51192"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#550000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136"
+       width="500"
+       height="250.35854"
+       x="80.765488"
+       y="172.38007" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="94.421066"
+       y="209.77611"
+       id="text4138"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4140"
+         x="94.421066"
+         y="209.77611"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Semi-Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff8080"
+           id="tspan4148">JSON</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff8080"
+           id="tspan4146">  27 bytes</tspan></tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4142"
+       y="363.03296"
+       x="93.623863"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="363.03296"
+         x="93.623863"
+         id="tspan4144"
+         sodipodi:role="line"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Semi-Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff8080"
+   id="tspan4150">MessagePack</tspan>  18 bytes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.73315239px;line-height:125%;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="107.44357"
+       y="242.96175"
+       id="text4152"
+       sodipodi:linespacing="125%"
+       transform="scale(0.9999927,1.0000073)"><tspan
+         sodipodi:role="line"
+         id="tspan4154"
+         x="107.44357"
+         y="242.96175"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.73318481px;line-height:125%;font-family:Inconsolatazi4;-inkscape-font-specification:'Inconsolatazi4, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">{ &quot;compact&quot; : true, &quot;schema&quot; : 0 }</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4156"
+       y="318.56415"
+       x="106.02934"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.73315239px;line-height:125%;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       transform="scale(0.9999927,1.0000073)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.73318481px;line-height:125%;font-family:Inconsolatazi4;-inkscape-font-specification:'Inconsolatazi4, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="318.56415"
+         x="106.02934"
+         id="tspan4158"
+         sodipodi:role="line">compact : true , schema : 0</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4160"
+       y="287.40451"
+       x="93.623863"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="287.40451"
+         x="93.623863"
+         id="tspan4162"
+         sodipodi:role="line"><tspan
+           id="tspan4166"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff8080"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:18.98095131px;line-height:125%;font-family:Aileron;-inkscape-font-specification:'Aileron, Semi-Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff8080"
+   id="tspan4168">HiPack</tspan>  21 bytes</tspan></tspan></text>
+    <g
+       id="g4184"
+       transform="matrix(1.0265197,0,0,1.0265347,-2.7571531,-154.40254)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4170"
+         y="537.60474"
+         x="105.97528"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.06816292px;line-height:125%;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.06819534px;line-height:125%;font-family:Inconsolatazi4;-inkscape-font-specification:'Inconsolatazi4, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="537.60474"
+           x="105.97528"
+           id="tspan4172"
+           sodipodi:role="line">82 A7 compact C3 A6 schema 00</tspan></text>
+      <rect
+         y="514.33673"
+         x="104.21614"
+         height="30.05204"
+         width="30.05204"
+         id="rect4174"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.97415829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.97415829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4176"
+         width="30.05204"
+         height="30.05204"
+         x="140.59114"
+         y="514.33673" />
+      <rect
+         y="514.33673"
+         x="278.71613"
+         height="30.05204"
+         width="30.05204"
+         id="rect4178"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.97415829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.97415829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4180"
+         width="30.05204"
+         height="30.05204"
+         x="316.34113"
+         y="514.33673" />
+      <rect
+         y="514.33673"
+         x="441.84113"
+         height="30.05204"
+         width="30.05204"
+         id="rect4182"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.97415829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:0.18784533;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4193"
+       width="488.61078"
+       height="72.124893"
+       x="86.460098"
+       y="263.93814"
+       rx="7.7781706"
+       ry="7.7781706" />
+  </g>
+</svg>
