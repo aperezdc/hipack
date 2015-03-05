@@ -1,10 +1,16 @@
-===============================
- HiPack Specification v1 (WIP)
-===============================
+======================
+ HiPack Specification
+======================
 
-:Authors: Adrián Pérez de Castro <aperez@igalia.com>
+:Version: 1
+:Status: **Release Candidate**
+:Authors: Adrián Pérez de Castro <aperez@igalia.com>,
+          Andrés J. Díaz López <ajdiaz@connectical.com>,
+          Óscar García Amor <ogarcia@connectical.com>
+:Date: 2015/03/05
 
 .. contents::
+
 
 
 Types
@@ -51,30 +57,75 @@ their first letter in caps:
 * ``False`` / ``false``
 
 
+Key
+---
+Dictionary keys are sequences of unquoted characters that satisfy the
+following:
+
+* The character ``:`` is not in the sequence.
+* The sequence does not contain any whitespace characters.
+* Non-ASCII characters are allowed, and they *must* be encoded as UTF-8.
+
+For more details on the meaning of *whitespace*, check the Encoding_ section.
+
+
 String
 ------
 Strings are delimited by double-quote characters (``"``).
 
-The backslash (``\``) character can be used to escape a number of characters
-that otherwise could be difficult to represent:
+It is possible to introduce arbitrary bytes in a string by escaping its
+hexadecimal value with a backslash, followed by two hexadecimal digits:
+``\NN`` represents the byte with value ``0xNN``. This mechanism allows
+encoding arbitrary data inside strings.
 
-======== ===== ==================
-Sequence ASCII Character
--------- ----- ------------------
-``\0``   0x00  Null
-``\t``   0x09  Horizontal tab
-``\n``   0x0A  New line
-``\r``   0x0D  Carriage return
-======== ===== ==================
+For convenience, the following shorthand backslash escape sequences are
+defined:
 
-Any other character that follows a backslash represents itself. This allows
-to embed backslash, and double-quote characters themselves into strings.
+======== ========= ===== ==================
+Escape   Shorthand Value Character
+-------- --------- ----- ------------------
+``\09``  ``\t``    0x09  Horizontal tab
+``\0A``  ``\n``    0x0A  New line
+``\0D``  ``\r``    0x0D  Carriage return
+======== ========= ===== ==================
+
+Note that strings may contain any arbitrary data. It is *recommended* to
+use hexadecimal escapes to encode non-printable characters (both ASCII
+and Unicode), or characters that may not be represented correctly by other
+means. Specially when messages are intended to be used by humans.
+
+
+Comments
+========
+
+Comments can appear anywhere except inside strings, and they span from an
+octothorpe sign (``#``) to the next carriage return character (``\n``,
+ASCII code ``0x0D``).
+
+Note that the grammar_ does not include comments because they are an optional
+construct that is intended to be removed by the lexer, before input reaches
+the parser. This means that comments are “transparent”: a HiPack message with
+its comments removed is always equivalent to itself.
+
+The motivation of allowing for simple, line-based comments is reusing the
+HiPack format for configuration files. When used for this purpose, messages
+(read: configuration files) are likely to be written, and read by humans, so
+they are likely to be formatted with proper indentation, where line-based
+comments blend naturally.
+
+Comments effectively prevent formatting messages in a more compact form
+without carriage returns and unneeded whitespace. This choice has been made
+on purpose to *discourage* using comments in this case, where messages are
+expected to be as compact as possible. On the other hand, in those cases
+where comments are used, it is more likely that humans would read the
+messages, in which case it would be desirable to have a more readable
+formatting anyway.
 
 
 Encoding
 ========
 
-All HiPack messages *must* be encoded as UTF-8.
+All HiPack messages *must* be encoded as UTF-8:
 
 * Message structure markers, number values, and boolean values, use exclusively
   ASCII characters. In particular:
@@ -94,7 +145,6 @@ All HiPack messages *must* be encoded as UTF-8.
 
 * Comment text between an octothorpe (``#``) marker and the end of line marker
   (``\n``) may contain any valid UTF-8 character sequence.
-
 
 
 Grammar
@@ -131,9 +181,4 @@ sections: Integer_, Float_, Bool_, String_.
   Message = Dict
           | KeyValuePair*
 
-
-Note that comments are not specified in the grammar above does not include
-comments for the sake of simplicity. Comments can appear anywhere except
-inside strings, and they span from the octothorpe sign (``#``) to the end of
-the line.
 
