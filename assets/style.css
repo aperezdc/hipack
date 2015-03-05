@@ -75,6 +75,12 @@ h3 {
 	padding-top: 0.5em;
 }
 
+h1, h3, p, ol, ul, dl {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+
 body, select, input, textarea {color: #333;}
 
 a {color: #800000;}
@@ -172,7 +178,7 @@ footer {
 #about-blurb-container .column-left {
 	background: #5a0000;
 	color: #ffefef;
-	padding: 1em;
+	padding: 1em 0;
 }
 
 #about-blurb-container .column-left {
