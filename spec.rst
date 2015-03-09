@@ -87,6 +87,8 @@ Escape   Shorthand Value Character
 ``\09``  ``\t``    0x09  Horizontal tab
 ``\0A``  ``\n``    0x0A  New line
 ``\0D``  ``\r``    0x0D  Carriage return
+``\22``  ``\"``    0x22  Double quote
+``\5C``  ``\\``    0x5C  Backslash
 ======== ========= ===== ==================
 
 Note that strings may contain any arbitrary data. It is *recommended* to
