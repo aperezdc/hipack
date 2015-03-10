@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'Aileron';
-    src: url('Aileron-Bold-webfont.eot');
-    src: url('Aileron-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Aileron-Bold-webfont.woff2') format('woff2'),
-         url('Aileron-Bold-webfont.woff') format('woff'),
-         url('Aileron-Bold-webfont.ttf') format('truetype'),
-         url('Aileron-Bold-webfont.svg#aileronbold') format('svg');
+    src: url('Aileron-Bold.eot');
+    src: url('Aileron-Bold.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Bold.woff2') format('woff2'),
+         url('Aileron-Bold.woff') format('woff'),
+         url('Aileron-Bold.ttf') format('truetype'),
+         url('Aileron-Bold.svg#aileronbold') format('svg');
     font-weight: bold;
     font-style: normal;
 
@@ -14,12 +14,12 @@
 
 @font-face {
     font-family: 'Aileron';
-    src: url('Aileron-BoldItalic-webfont.eot');
-    src: url('Aileron-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Aileron-BoldItalic-webfont.woff2') format('woff2'),
-         url('Aileron-BoldItalic-webfont.woff') format('woff'),
-         url('Aileron-BoldItalic-webfont.ttf') format('truetype'),
-         url('Aileron-BoldItalic-webfont.svg#aileronbold_italic') format('svg');
+    src: url('Aileron-BoldItalic.eot');
+    src: url('Aileron-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-BoldItalic.woff2') format('woff2'),
+         url('Aileron-BoldItalic.woff') format('woff'),
+         url('Aileron-BoldItalic.ttf') format('truetype'),
+         url('Aileron-BoldItalic.svg#aileronbold_italic') format('svg');
     font-weight: bold;
     font-style: italic;
 
@@ -27,12 +27,12 @@
 
 @font-face {
     font-family: 'Aileron';
-    src: url('Aileron-Italic-webfont.eot');
-    src: url('Aileron-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Aileron-Italic-webfont.woff2') format('woff2'),
-         url('Aileron-Italic-webfont.woff') format('woff'),
-         url('Aileron-Italic-webfont.ttf') format('truetype'),
-         url('Aileron-Italic-webfont.svg#aileronitalic') format('svg');
+    src: url('Aileron-Italic.eot');
+    src: url('Aileron-Italic.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Italic.woff2') format('woff2'),
+         url('Aileron-Italic.woff') format('woff'),
+         url('Aileron-Italic.ttf') format('truetype'),
+         url('Aileron-Italic.svg#aileronitalic') format('svg');
     font-weight: normal;
     font-style: italic;
 
@@ -40,12 +40,12 @@
 
 @font-face {
     font-family: 'Aileron';
-    src: url('Aileron-Regular-webfont.eot');
-    src: url('Aileron-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Aileron-Regular-webfont.woff2') format('woff2'),
-         url('Aileron-Regular-webfont.woff') format('woff'),
-         url('Aileron-Regular-webfont.ttf') format('truetype'),
-         url('Aileron-Regular-webfont.svg#aileronregular') format('svg');
+    src: url('Aileron-Regular.eot');
+    src: url('Aileron-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Regular.woff2') format('woff2'),
+         url('Aileron-Regular.woff') format('woff'),
+         url('Aileron-Regular.ttf') format('truetype'),
+         url('Aileron-Regular.svg#aileronregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -63,7 +63,7 @@ ul, ol, dl {
 
 h1 {
 	font-size: 200%;
-	margin-top: 1em;
+	margin-top: 2em;
 	margin-bottom: 0.5em;
 	border-bottom: 2px solid #800000;
 }
@@ -87,14 +87,14 @@ a {color: #800000;}
 a:hover {color: #550000;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::-moz-selection{background: #ff8080; color: #fff; text-shadow: none;}
+::selection {background: #ff8080; color: #fff; text-shadow: none;}
 
-/*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+/*	j.mp/webkit-tap-highlight-color */<F2>
+a:link {-webkit-tap-highlight-color: #fcd700;}
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color: #ff8080; color: #000; text-decoration: none;}
+mark {background-color: #ff8080; color: #000; font-style: italic; font-weight: bold;}
 
 /* Mozilla dosen't style place holders by default */
 input:-moz-placeholder { color:#a9a9a9; }
@@ -124,6 +124,7 @@ header nav ol {
 	text-align: right;
 	height: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 header nav li {
@@ -149,12 +150,18 @@ header nav a:hover {
 
 
 footer {
+	clear: both;
 	margin: 2em 0;
 	padding-top: 5em;
 	padding-bottom: 1em;
 	font-size: 80%;
 	text-align: center;
 	color: #ccc;
+}
+
+
+article {
+	clear: both;
 }
 
 
@@ -187,22 +194,24 @@ footer {
 
 /* Styling for the language support list
 -------------------------------------------------------------------------------*/
-dl.tagged-list {
+
+dl.tagged-list > dt {
+	display: inline;
+	font-weight: bold;
+	padding: 0.1em 0.5em;
+	background: #5a0000;
+	color: #ff8080;
+	border-radius: 3px;
+	margin-right: 0.5em;
 }
 
-dl.tagged-list dt,
-dl.tagged-list dd {
-	padding: 0.25em 0.5em;
+dl.tagged-list > dd {
+	display: inline;
 }
 
-dl.tagged-list dt {
-	text-align: right;
-}
-
-dl.tagged-list dd span {
+dl.tagged-list > dd > span {
+	margin: 0.5em 1em 1em 1em;
 	display: block;
-	color: #888;
-	font-style: italic;
 }
 
 
