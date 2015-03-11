@@ -7,7 +7,7 @@
 :Authors: Adrián Pérez de Castro <aperez@igalia.com>,
           Andrés J. Díaz López <ajdiaz@connectical.com>,
           Óscar García Amor <ogarcia@connectical.com>
-:Date: 2015/03/05
+:Date: 2015/03/11
 
 .. contents::
 
@@ -62,7 +62,7 @@ Key
 Dictionary keys are sequences of unquoted characters that satisfy the
 following:
 
-* The character ``:`` is not in the sequence.
+* None of the following characters are contained in the sequence: ``[]{}:,``
 * The sequence does not contain any whitespace characters.
 * Non-ASCII characters are allowed, and they *must* be encoded as UTF-8.
 
