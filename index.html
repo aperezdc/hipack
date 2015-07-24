@@ -52,6 +52,45 @@
 	<meta property="og:description" content="HiPack: like MessagePack, but human." />
 	<meta property="og:url" content="http://hipack.org" />
 	<meta property="og:image" content="http://hipack.org/assets/hipack-logo-full.png" />
+
+	<script type="text/javascript">
+	function createRequest(method, url) {
+		var req = new XMLHttpRequest();
+		if ("withCredentials" in req) {
+			req.open(method, url, true);
+		} else if (typeof XDomainRequest != "undefined") {
+			req = new XDomainRequest();
+			req.open(method, url);
+		} else {
+			req = null;
+		}
+		return req;
+	}
+
+	function convertHiPack() {
+		var compact = document.getElementById("try-convert-compact").checked ? "&compact=1" : "";
+		var format = document.getElementById("try-convert-format");
+
+		var req = createRequest("POST", "http://www.connectical.com/hipack/" +
+				format.value + "?t=" + ((new Date()).getTime()) + compact);
+		if (!req) {
+			// TODO: Signal missing CORS support somehow.
+			return false;
+		}
+		req.onload = function () {
+			if (req.readyState == 4) {
+				var output = document.getElementById("try-convert-output");
+				if (req.status == 200) {
+					output.value = req.responseText;
+				} else {
+					output.value = "(Error " + req.status + ")";
+				}
+			}
+		};
+		req.send(document.getElementById("try-convert-input").value);
+		return false;
+	}
+	</script>
 </head>
 
 <body>
@@ -86,6 +125,39 @@
 					 alt="Comparison of HiPack, JSON, and MessagePack">
 			</div>
 			<div class="column-flush"></div>
+		</div>
+	</article>
+
+	<article>
+		<h1><a id="try">Try It</a></h1>
+		<p>
+			Use the left box to input text in JSON or YAML, and check how it
+			would look converted into HiPack, optionally in “compact” form.
+		</p>
+		<div id="try-container" style="margin: 1em auto; text-align:center;
+			background: #5a0000; border-radius: 7px; padding: 16px; color:
+			#ffefef">
+		<form id="try-convert" method="POST" action="#" onsubmit="return convertHiPack()">
+			<label for="try-convert-format">Input format:</label>
+			<select id="try-convert-format">
+				<option value="json" selected>JSON</option>
+				<option value="yaml">YAML</option>
+				<option value="hipack">HiPack</option>
+			</select>
+			&nbsp;
+			&bull;
+			&nbsp;
+			<input type="checkbox" id="try-convert-compact">
+			<label for="try-convert-compact">Compact output</label>
+			<br>
+			<textarea id="try-convert-input">{
+  "input": "JSON",
+  "compact": false
+}</textarea>
+			<textarea id="try-convert-output" readonly></textarea>
+			<br>
+			<input type="submit" value="Convert!" id="try-convert-button">
+		</form>
 		</div>
 	</article>
 

@@ -214,6 +214,39 @@ dl.tagged-list > dd > span {
 	display: block;
 }
 
+#try-convert {
+	width: 100%;
+}
+
+#try-convert textarea {
+	background-color: #ffefef;
+	font-family: monospace;
+	width: 49%;
+	height: 200px;
+	margin: 0;
+	padding: 0.25em;
+	border: 2px solid #800000;
+	border-radius: 3px;
+}
+
+#try-convert-button {
+	background: #ffefef;
+	color: #5a0000;
+	margin: 0.5em 0 0 0;
+	padding: 0.25em 1em;
+	font-size: 150%;
+	border: 3px solid #a00000;
+	border-radius: 7px;
+}
+
+#try-convert-button:hover {
+	border-color: #ff8080;
+}
+
+#try-convert-button:active {
+	border-color: #888;
+	color: #888;
+}
 
 /* Media queries
 -------------------------------------------------------------------------------*/
