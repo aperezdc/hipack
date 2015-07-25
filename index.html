@@ -151,8 +151,20 @@
 			<label for="try-convert-compact">Compact output</label>
 			<br>
 			<textarea id="try-convert-input">{
-  "input": "JSON",
-  "compact": false
+    "array": [
+        1,
+        2,
+        3
+    ],
+    "boolean": true,
+    "number": 123,
+    "float": 1.23,
+    "object": {
+        "a": "b",
+        "c": "d",
+        "e": "f"
+    },
+    "string": "Hello World"
 }</textarea>
 			<textarea id="try-convert-output" readonly></textarea>
 			<br>
