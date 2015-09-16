@@ -71,7 +71,7 @@
 		var compact = document.getElementById("try-convert-compact").checked ? "&compact=1" : "";
 		var format = document.getElementById("try-convert-format");
 
-		var req = createRequest("POST", "http://www.connectical.com/hipack/" +
+		var req = createRequest("POST", "http://crypt.connectical.com/hipack/" +
 				format.value + "?t=" + ((new Date()).getTime()) + compact);
 		if (!req) {
 			// TODO: Signal missing CORS support somehow.
