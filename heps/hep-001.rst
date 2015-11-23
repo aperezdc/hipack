@@ -1,0 +1,28 @@
+============================
+ HEP-1: Value Annotations
+============================
+
+:HEP: 1
+:Title: Value Annotations
+:Authors: Adrián Pérez de Castro <aperez@igalia.com>
+:Status: **Proposal**
+:Date: 2015/11/23
+
+.. contents::
+
+
+Abstract
+========
+
+Rationale
+=========
+
+
+References
+==========
+
+Copyright
+=========
+
+This document has been placed in the public domain, under the terms of the
+[CC0 license](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

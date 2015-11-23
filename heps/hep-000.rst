@@ -1,0 +1,52 @@
+==============================================
+ HEP-0: Index of HiPack Enhancement Proposals
+==============================================
+
+:HEP: 0
+:Title: Index of HiPack Enhancement Proposals
+:Author: Adrián Pérez de Castro <aperez@igalia.com>
+:Status: **Active**
+:Type: Informational
+
+.. contents::
+
+
+Introduction
+============
+
+This HEP contains the list of all the HiPack Enhancement Proposals, known as
+HEPs. HEP numbers are assigned by the HEP editors, and once assigned are never
+changed. The Git history [1]_ of the HEP texts represents their historical
+record.
+
+
+Index
+=====
+
+====== ======= ==============================================
+Number Owwer   Title
+------ ------- ----------------------------------------------
+     1  AP     `Value Annotations <hep-001.rst>`__
+====== ======= ==============================================
+
+
+Owner Acronyms
+--------------
+
+========= ======================================================
+Acronym   Owner
+--------- ------------------------------------------------------
+AP        Adrián Pérez de Castro <aperez@igalia.com>
+========= ======================================================
+
+
+References
+==========
+
+.. [1] https://github.com/aperezdc/hipack/tree/gh-pages/heps/
+
+Copyright
+=========
+
+This document has been placed in the public domain, under the terms of the
+[CC0 license](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
