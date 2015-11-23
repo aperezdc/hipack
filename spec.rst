@@ -3,7 +3,7 @@
 ======================
 
 :Version: 1
-:Status: **Release Candidate**
+:Status: **Stable**
 :Authors: Adrián Pérez de Castro <aperez@igalia.com>,
           Andrés J. Díaz López <ajdiaz@connectical.com>,
           Óscar García Amor <ogarcia@connectical.com>
