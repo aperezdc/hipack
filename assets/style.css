@@ -80,6 +80,16 @@ h1, h3, p, ol, ul, dl {
 	padding-right: 16px;
 }
 
+ul.news li {
+	padding-left: 2em;
+}
+ul.news li span.date {
+	color: #888;
+	margin-left: -2em;
+}
+ul.news li span.date:after {
+	content: " •";
+}
 
 body, select, input, textarea {color: #333;}
 
@@ -198,13 +208,24 @@ article {
 dl.tagged-list > dt {
 	display: inline;
 	font-weight: bold;
-	padding: 0.1em 0.5em;
+	padding: 0.3em 0.5em;
 	background: #5a0000;
 	color: #ff8080;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin-right: 0.5em;
 }
 
+dl.tagged-list dt span.tag {
+	color: #5a0000;
+	background: #ff8080;
+	border-radius: 2px;
+	padding: 0.05em 0.2em;
+	margin-left: 0.2em;
+	font-size: 90%;
+}
+dl.tagged-list dt:first-child span.tag {
+	margin-left: 0.5em;
+}
 dl.tagged-list > dd {
 	display: inline;
 }
