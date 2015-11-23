@@ -1,0 +1,231 @@
+============================
+ HEP-1: Value Annotations
+============================
+
+:HEP: 1
+:Title: Value Annotations
+:Authors: Adrián Pérez de Castro <aperez@igalia.com>
+:Status: **Proposal**
+:Date: 2015/11/23
+
+.. contents::
+
+
+Abstract
+========
+
+This HEP introduces new syntax for allowing arbitrary metadata (“annotations”)
+being associated to values in serialized HiPack messages.
+
+
+Rationale
+=========
+
+Values in HiPack have a certain *intrinsic* type, and the way the
+serialization is specified makes the grammar of messages ambiguous. Apart from
+the value itself, and its implicit type, each value does not carry any kind
+of additional information about itself. While there are ways to workaround
+this, it is desirable to provide the possibility of attaching arbitrary
+metadata to values. The reasons are multiple:
+
+* Using workarounds results in artificial additional nesting levels. For
+  example, if an application wanted to provide additional information about
+  the values it serializes, using the following message as starting point
+  (not how it is not possible to know the unit for ``size``)::
+
+    disk {
+        size: 1
+    }
+
+  and transform it into::
+
+    disk {
+        size {
+            unit: "GiB"
+            value: 1
+        }
+    }
+
+  Providing a mechanism to attach additional information to value of the
+  ``size: 1`` dictionary entry would prevent the additional level of nesting.
+
+* Supporting per-value metadata allows to change the meaning of built-in
+  types, which in turn allows for serialization of a richer variety of data
+  types that those specified by HiPack, for those applications which may need
+  them.
+
+* Providing type information for compound values (dictionaries and lists)
+  which allows mapping them to compound types of the application domain.
+
+
+Syntax
+======
+
+Annotations are placed before value literals. The first character is always a
+colon (``:``) followed by any non-whitespace character except one of
+``{}[]:,``, or in other words: a colon immediately followed by a dictionary
+key.
+
+The example above can thus be rewritten as follows::
+
+    disk {
+        size :GiB 1
+    }
+
+Or, using a colon separator after the ``size`` key::
+
+    disk {
+        size: :GiB 1
+    }
+
+Note that the whitespace before the annotation is optional, and the following
+form is equivalent as well::
+
+    disk {
+        size::GiB 1
+    }
+
+On the other hand, note that using two colons (``::``) is necessary and it is
+*not possible* to omit one of them: the first colon is the separator between
+the dictionary key and the value, while the second colon indicates the
+beginning of the annotation.
+
+Multiple annotations are possible by placing them after one another. With this
+in mind, the above example could be modified as follows::
+
+    disk {
+        # A cache is present, used both for reads and writes
+        cache :read :write True
+        size :GiB 1
+    }
+
+Again, the whitespace at the left side of the colon which marks the begin of each
+annotation is optional, so the following message is equivalent::
+
+    disk {
+        # A cache is present, used both for reads and writes
+        cache::read:write True
+        size::GiB 1
+    }
+
+In particular, the `syntax`_ has been chosen in a way that makes it
+aesthetically pleasant to provide annotations which indicate the type (in the
+domain of the application) to which a dictionary value should be mapped to.
+For example, the following could be a message used to configure an ``inetd``
+style socket server::
+
+    http::stream {
+        exec     [ "/usr/libexec/in.httpd", "--document-root=/srv/www" ]
+        ports    [ 80, :tls 443 ]
+        tls-cert "/etc/ssl/http.pem"
+    }
+    time::dgram {
+        exec     [ "/usr/libexec/in.ntpd" ]
+        ports    [ :service "ntp-server" ]
+    }
+
+
+Grammar
+-------
+
+The grammar production for the ``Value`` non-terminal is modified to
+optionally accept the list of annotations in front of the literal value. The
+updated ``Value`` production is updated to allow zero or more annotations::
+
+    Value = Annotation* Literal
+
+With ``Literal`` being one of the literal values, as previously produced by
+``Value``::
+
+    Literal = Integer
+            | Float
+            | Bool
+            | String
+            | List
+            | Dict
+
+The new ``Annotation`` non-terminal is defined as follows::
+
+    Annotation = Whitespace? ':' Key Whitespace
+
+Note how the ``Key`` production is reused to allow annotations to contain
+almost any character (except those invalid for dictionary keys, including
+``:``), which allows a great deal of flexibility. The choice of using a colon
+to indicate the start of an annotation is unambiguous, and keeps the allows
+parsers to continue operating using a single look-ahead character.
+
+
+Semantics
+=========
+
+The colon (``:``) character which introduces an annotation is a delimiter, and
+it is not part of the contents of annotations (i.e. the contens of an
+annotation ``:foo`` in serialized format are ``foo`` after parsing).
+
+In general, HiPack does not specify a meaning for the contents of annotations,
+and applications are free to use annotations in any suitable way. A provision
+for `reserved values`_ is done, in order to allow for future extensibility.
+
+Reserved Values
+---------------
+
+All the annotations whose contents start with a period (``.``, ASCII value
+``0x2E``) are reserved for the purposes of the specification of the HiPack
+serialized message format, and *must not* be used by applications for their
+own purposes.
+
+Intrinsic Type Annotations
+--------------------------
+
+Every literal value in HiPack carries implicitly a type. In the same way, it
+can be considered that each value carries an implicit annotation which
+indicates the type of the value. Those annotations are well-defined `reserved
+values`_, with the following correspondence to value types:
+
+============== =========================
+Type           Intrinsic Type Annotation
+-------------- -------------------------
+``Integer``    ``.int``
+``Float``      ``.float``
+``Bool``       ``.bool``
+``String``     ``.string``
+``List``       ``.list``
+``Dictionary`` ``.dict``
+============== =========================
+
+If so desired, type annotations can be written explicitly in serialized
+messages, and they indicate the intended type of the value::
+
+    disk {
+        size :GiB :.int 1
+    }
+
+Note that the textual representation of the value *must* match that expected
+for the intended type, if the latter has been indicated explicitly. This means
+that the following is invalid because the value is given as an ``Integer``
+literal, but the type annotation is not ``.int``::
+
+    disk {
+        size :GiB :.float 1
+    }
+
+In these cases, a compliant parser should indicate an error, *even if the
+textual representation of the value can be converted to the type which has
+been indicated with an annotation*.
+
+Note that intrinsic type annotations can still be useful in certain scenarios.
+As an example, a parser implementor may choose to return the *unconverted*
+textual representation of a value and, at the same time, an intrinsic type
+annotation (which can be implicit, or explicit in a message) which indicates
+the intended type to the application. This way, a value like ``0xC0FEE``
+would be passed to the application as the sequence of bytes ``0xC0FEE`` and
+the (implicit) type annotation ``.int``, and in this way the information
+that the value was provided in hexadecimal form is available to the
+application.
+
+
+Copyright
+=========
+
+This document has been placed in the public domain, under the terms of the
+`CC0 license <https://creativecommons.org/publicdomain/zero/1.0/legalcode>`__.
