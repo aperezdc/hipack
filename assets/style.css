@@ -91,6 +91,19 @@ ul.news li span.date:after {
 	content: " •";
 }
 
+ul.bullet-list {
+	margin: 0.5em 2.5em;
+}
+ul.bullet-list li {
+	margin-bottom: 0.25em;
+}
+ul.bullet-list li:before {
+	margin-left: -1em;
+	margin-right: 0.5em;
+	content: "▪";
+	color: #800000;
+}
+
 body, select, input, textarea {color: #333;}
 
 a {color: #800000;}
