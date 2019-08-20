@@ -53,41 +53,28 @@
 	<meta property="og:url" content="http://hipack.org" />
 	<meta property="og:image" content="http://hipack.org/assets/hipack-logo-full.png" />
 
+	<script type="text/javascript" src="assets/hipack.min.js"></script>
 	<script type="text/javascript">
-	function createRequest(method, url) {
-		var req = new XMLHttpRequest();
-		if ("withCredentials" in req) {
-			req.open(method, url, true);
-		} else if (typeof XDomainRequest != "undefined") {
-			req = new XDomainRequest();
-			req.open(method, url);
-		} else {
-			req = null;
-		}
-		return req;
-	}
-
 	function convertHiPack() {
-		var compact = document.getElementById("try-convert-compact").checked ? "&compact=1" : "";
-		var format = document.getElementById("try-convert-format");
+		var compact = document.getElementById("try-convert-compact").checked;
+		var input = document.getElementById("try-convert-input").value;
+		var output = document.getElementById("try-convert-output");
 
-		var req = createRequest("POST", "http://crypt.connectical.com/hipack/" +
-				format.value + "?t=" + ((new Date()).getTime()) + compact);
-		if (!req) {
-			// TODO: Signal missing CORS support somehow.
+		try {
+			var data = JSON.parse(input);
+		} catch (e) {
+			output.value = "Error parsing JSON:\n" + e;
 			return false;
 		}
-		req.onload = function () {
-			if (req.readyState == 4) {
-				var output = document.getElementById("try-convert-output");
-				if (req.status == 200) {
-					output.value = req.responseText;
-				} else {
-					output.value = "(Error " + req.status + ")";
-				}
-			}
-		};
-		req.send(document.getElementById("try-convert-input").value);
+
+		try {
+			var converted = hipack.dump(data, compact);
+		} catch (e) {
+			output.value = "Error generating HiPack:\n" + e;
+			return false;
+		}
+
+		output.value = converted;
 		return false;
 	}
 	</script>
@@ -132,25 +119,13 @@
 	<article>
 		<h1><a id="try">Try It</a></h1>
 		<p>
-			Use the left box to input text in JSON or YAML, and check how it
+			Use the left box to input text in JSON, and check how it
 			would look converted into HiPack, optionally in “compact” form.
 		</p>
 		<div id="try-container" style="margin: 1em auto; text-align:center;
 			background: #5a0000; border-radius: 7px; padding: 16px; color:
 			#ffefef">
 		<form id="try-convert" method="POST" action="#" onsubmit="return convertHiPack()">
-			<label for="try-convert-format">Input format:</label>
-			<select id="try-convert-format">
-				<option value="json" selected>JSON</option>
-				<option value="yaml">YAML</option>
-				<option value="hipack">HiPack</option>
-			</select>
-			&nbsp;
-			&bull;
-			&nbsp;
-			<input type="checkbox" id="try-convert-compact">
-			<label for="try-convert-compact">Compact output</label>
-			<br>
 			<textarea id="try-convert-input">{
     "array": [
         1,
@@ -170,6 +145,9 @@
 			<textarea id="try-convert-output" readonly></textarea>
 			<br>
 			<input type="submit" value="Convert!" id="try-convert-button">
+			<br>
+			<input type="checkbox" id="try-convert-compact">
+			<label for="try-convert-compact">Compact output</label>
 		</form>
 		</div>
 	</article>
@@ -177,6 +155,10 @@
 	<article>
 		<h1><a id="news">News</a></h1>
 		<ul class="news">
+			<li><span class="date">2019/08/20</span> Updated <a href="#try">Try It</a>
+				section in the website to use <a href="https://github.com/aperezdc/hipack-js">hipack-js</a>
+				instead of relying on a remote REST service.
+			</li>
 			<li><span class="date">2015/11/23</span> <a
 					href="https://github.com/aperezdc/hipack/blob/v1/spec.rst">HiPack
 				v1</a> is now stable. The <a href="#code">list of implementations</a>
