@@ -55,13 +55,28 @@
 
 	<script type="text/javascript" src="assets/hipack.min.js"></script>
 	<script type="text/javascript">
+	function findNull(obj, out) {
+		var ret = 0;
+
+		for(i in obj) {
+			if (obj[i] === null) {
+				delete out[i];
+				ret = 1;
+			}
+			else if (typeof(obj[i]) === 'object')
+				ret = findNull(obj[i], out[i]);
+		}
+		return ret;
+	}
 	function convertHiPack() {
 		var compact = document.getElementById("try-convert-compact").checked;
 		var input = document.getElementById("try-convert-input").value;
 		var output = document.getElementById("try-convert-output");
 
 		try {
+			var orig = JSON.parse(input);
 			var data = JSON.parse(input);
+			var hasNull = findNull(orig, data);
 		} catch (e) {
 			output.value = "Error parsing JSON:\n" + e;
 			return false;
@@ -69,7 +84,21 @@
 
 		try {
 			var converted = hipack.dump(data, compact);
-		} catch (e) {
+			if (hasNull) {
+				converted += (
+					"\n\n# !!!!  WARNING   !!!!\n#" +
+					"\n# You have null values in" +
+					"\n# your origin, but HiPack" +
+					"\n# do not handle null " +
+					"\n# values by default. Read" +
+					"\n# the specification and " +
+					"\n# the HEP-001 to understand" +
+					"\n# why and how to represent" +
+					"\n# null values in HiPack.\n"
+				)
+			}
+
+	  } catch (e) {
 			output.value = "Error generating HiPack:\n" + e;
 			return false;
 		}
