@@ -8,6 +8,14 @@
 :Status: **Proposal**
 :Date: 2015/11/23
 
+
+Changelog
+=========
+
+:2022-06-24: Add considerations about null values. This change does not alter 
+             the specification, is just to clarify some obscure points.
+
+
 .. contents::
 
 
@@ -222,6 +230,20 @@ would be passed to the application as the sequence of bytes ``0xC0FEE`` and
 the (implicit) type annotation ``.int``, and in this way the information
 that the value was provided in hexadecimal form is available to the
 application.
+
+Using value annotations to generate null values
+-----------------------------------------------
+
+HiPack does not support ``null`` values natively. This is design consideration
+because the representation of a ``null`` value is different depending on the
+target language that you are using. For example in C it's a special case of
+``void *`` which indicates a non-valid pointer, in python a ``None`` means
+that some variable does not have any value, and so on. With value annotations
+you can find a suitable representation of ``null`` values with a special
+annotation, for instance: ``field::invalid ""`` could represent an invalid
+value for something that suppose to be a string. Sometimes a ``null`` means
+“generate automatically a default value”, in which case ``field::default ""``
+could be a better representation.
 
 
 Copyright

@@ -5,9 +5,16 @@
 :Version: 1
 :Status: **Stable**
 :Authors: Adrián Pérez de Castro <aperez@igalia.com>,
-          Andrés J. Díaz López <ajdiaz@connectical.com>,
+          Andrés J. Díaz López <ajdiaz@ajdiaz.me>,
           Óscar García Amor <ogarcia@connectical.com>
 :Date: 2015/03/11
+
+Changelog
+=========
+
+:2022-06-24: Add considerations about null values. This change does not alter 
+             the specification, is just to clarify some obscure points.
+
 
 .. contents::
 
@@ -95,6 +102,17 @@ Note that strings may contain any arbitrary data. It is *recommended* to
 use hexadecimal escapes to encode non-printable characters (both ASCII
 and Unicode), or characters that may not be represented correctly by other
 means. Specially when messages are intended to be used by humans.
+
+Null Values
+-----------
+
+HiPack does not support null values by design. A null value could means a lot
+of things, depending on the target language. Is not easy to convert a ``null``
+to something *typable*.
+
+:💡 **Tip**: You can represent ``null`` values in a proper way
+               using value annotations, as described in
+               `HEP-001 <https://github.com/aperezdc/hipack/blob/gh-pages/heps/hep-001.rst>`_.
 
 
 Comments
